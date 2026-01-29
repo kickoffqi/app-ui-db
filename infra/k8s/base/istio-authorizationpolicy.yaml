@@ -1,0 +1,18 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: allow-frontend-to-api
+spec:
+  selector:
+    matchLabels:
+      app: events-api
+  action: ALLOW
+  rules:
+    - from:
+        - source:
+            principals:
+              - "cluster.local/ns/events/sa/events-frontend"
+      to:
+        - operation:
+            ports:
+              - "8000"

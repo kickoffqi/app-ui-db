@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@400;600&display=swap");
+
+:root {
+  --bg: #f5f3ef;
+  --ink: #161516;
+  --muted: #5e5b57;
+  --accent: #e4572e;
+  --card: #ffffff;
+  --border: #e4ded7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top left, #fff4ea 0%, var(--bg) 55%, #f0f7ff 100%);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px clamp(20px, 5vw, 64px);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(4px);
+}
+
+.brand {
+  font-family: "DM Serif Display", "Georgia", serif;
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+main {
+  padding: 40px clamp(20px, 5vw, 64px) 80px;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(22, 21, 22, 0.08);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #ffe7de;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form {
+  max-width: 560px;
+  display: grid;
+  gap: 16px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+input, textarea {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-family: inherit;
+  font-size: 15px;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 14px;
+}
