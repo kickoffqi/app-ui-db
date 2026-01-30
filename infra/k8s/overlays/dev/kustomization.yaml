@@ -9,3 +9,7 @@ images:
     newTag: dev
 patches:
   - path: ingress-host-patch.yaml
+  - path: replica-patch.yaml
+    target:
+      kind: Deployment
+      name: events-api

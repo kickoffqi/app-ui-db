@@ -1,0 +1,6 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: events-api # 必须和 base 里的 metadata.name 完全一致
+spec:
+  replicas: 3 # 这里写你想在 dev 环境覆盖的值
