@@ -12,3 +12,4 @@ Quick start (local):
 Kubernetes:
 - Base: `kustomize build infra/k8s/base`
 - Dev: `kustomize build infra/k8s/overlays/dev`
+
