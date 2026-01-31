@@ -13,3 +13,6 @@ Kubernetes:
 - Base: `kustomize build infra/k8s/base`
 - Dev: `kustomize build infra/k8s/overlays/dev`
 
+Install Ingress-nginx
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm install ingress-nginx ingress-nginx/ingress-nginx -n ingress-nginx --create-namespace

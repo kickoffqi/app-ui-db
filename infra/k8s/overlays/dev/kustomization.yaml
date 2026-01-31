@@ -4,11 +4,14 @@ resources:
   - ../../base
 images:
   - name: ghcr.io/example/events-api
-    newTag: dev
+    newName: ghcr.io/kickoffqi/events-api
+    newTag: sha-3ff0f06
   - name: ghcr.io/example/events-frontend
-    newTag: dev
+    newName: ghcr.io/kickoffqi/events-frontend
+    newTag: sha-3ff0f06
 patches:
   - path: ingress-host-patch.yaml
+  - path: imagepullpolicy-patch.yaml
   - path: replica-patch.yaml
     target:
       kind: Deployment
