@@ -14,5 +14,5 @@ resources:
   - networkpolicy-allow-frontend-ingress.yaml
   - networkpolicy-allow-frontend-egress.yaml
   - networkpolicy-allow-api-ingress.yaml
-  - istio-peerauthentication.yaml
-  - istio-authorizationpolicy.yaml
+  #- istio-peerauthentication.yaml
+  #- istio-authorizationpolicy.yaml
